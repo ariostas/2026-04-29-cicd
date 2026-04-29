@@ -19,6 +19,7 @@ jobs:
   test:
     name: Test Python package
     runs-on: ${{ matrix.os }}
+    needs: [hello]
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
